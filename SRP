@@ -5,7 +5,6 @@ class User {
         this.name = name;
         this.email = email;
     }
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -13,9 +12,8 @@ class User {
         return email;
     }
 }
-// SRP: A class that handles user notifications
 class UserNotification {
     public void notifyUser (User user) {
-        System.out.println("Notification sent to: " + user.getEmail());
+        System.out.println("Notification sent to: " user.getEmail());
     }
 }
