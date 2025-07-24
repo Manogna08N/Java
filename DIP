@@ -1,0 +1,17 @@
+interface PaymentMethod {
+    void pay(double amount);
+}
+class UpiPayment implements PaymentMethod {
+    public void pay(double amount) {
+        System.out.println("Paid " + amount + " via UPI");
+    }
+}
+class OrderService {
+    private final PaymentMethod paymentMethod;
+    OrderService(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+    void completeOrder(double amount) {
+        paymentMethod.pay(amount);
+    }
+}
