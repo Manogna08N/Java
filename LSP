@@ -1,0 +1,19 @@
+class Bird {
+    public void fly() {
+        System.out.println("Flying");
+    }
+}
+// LSP: Sparrow class extending Bird
+class Sparrow extends Bird {
+    @Override
+    public void fly() {
+        System.out.println("Sparrow flying");
+    }
+}
+// LSP: Ostrich class (does not fly)
+class Ostrich extends Bird {
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Ostrich cannot fly");
+    }
+}
